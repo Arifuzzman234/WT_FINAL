@@ -48,11 +48,13 @@
 		}
 		if(!$hasError){
 			
+			
 			if($user = authenticateUser($_POST["uname"],$_POST["pass"])){
 				session_start();
-				$_SESSION["loggeduser"] = $_POST["uname"];
-				if($user["status"] == "active" && $user["type"]=="manager")
-					header("Location: manager.php");
+                    $_SESSION["data"] = $rs;
+                    setcookie("loggedUser",$email,time()+2);
+				header("Location: manager.php");
+				
 			
 					
 			}

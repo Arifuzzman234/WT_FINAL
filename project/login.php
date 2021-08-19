@@ -1,5 +1,5 @@
 <?php include 'mainheader.php';
-	  include 'controllers/Usercontroller.php';
+	  include 'controllers/UserController.php';
 ?>
 
 <!--login starts -->
